@@ -55,6 +55,8 @@ def openstack(request):
                            'name': request.session.get('region_name')},
                'available': [{'endpoint': region[0], 'name':region[1]} for
                              region in available_regions]}
+    service_provider_name = request.session.get('service_provider_name')
+    context['service_provider_name'] = service_provider_name
     context['regions'] = regions
 
     # Adding webroot access

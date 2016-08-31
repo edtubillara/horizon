@@ -46,6 +46,7 @@
         var passwordInput = element.find("#id_password").parents('.form-group');
         var domainInput = element.find('#id_domain').parents('.form-group');
         var regionInput = element.find('#id_region').parents('.form-group');
+        var serviceProviderInput = element.find('#id_service_provider').parents('.form-group')
 
         /**
          * `helpText` exists outside of element,
@@ -69,12 +70,14 @@
                 passwordInput.show();
                 domainInput.show();
                 regionInput.show();
+                serviceProviderInput.show();
                 break;
               default:
                 userInput.hide();
                 passwordInput.hide();
                 domainInput.hide();
                 regionInput.hide();
+                serviceProviderInput.hide();
             }
           }); // end of timeout
         } // end of onChange
